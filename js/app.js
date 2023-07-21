@@ -78,12 +78,21 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    let ans = 0;
+    let stringAns = "";
+    for(let i = 0; i < sumArr.length; i++){
+        stringAns += sumArr[i];
+        if(i < sumArr.length - 1)
+            stringAns += ',';
+        ans = sum(ans, sumArr[i])[0];
+    }
+    stringAns += ' was passed in as an array of numbers, and ' + ans + ' is their sum.'
+    return [ans, stringAns];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+ testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
