@@ -54,9 +54,9 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
     let s = sum(sum(a, b)[0], c);
     let product = multiply(multiply(a, b)[0], c);
-    let firstString =  a + ' and ' + b + ' and ' + c + ' sum to ' + s + '.';
-    let secondString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product + '.';
-    return [s, product, firstString, secondString];
+    let firstString =  a + ' and ' + b + ' and ' + c + ' sum to ' + s[0] + '.';
+    let secondString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product[0] + '.';
+    return [s[0], product[0], firstString, secondString];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
